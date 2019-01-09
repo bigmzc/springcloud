@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.baizhi</groupId>
-    <artifactId>eureka-client</artifactId>
+    <artifactId>eureka-client-feign</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eureka-client</name>
+    <name>eureka-client-feign</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -29,15 +29,22 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!--消费者使用spring-cloud-starter-eureka 生产者不需要-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
 
         <!--服务健康监测jar-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!--feign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
         </dependency>
 
         <!--容错服务-->
